@@ -1,0 +1,298 @@
+:root {
+  --main-transiton: 0.5s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+header {
+  background-image: url("../images/events-heavenly-header.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 90vh;
+  overflow: hidden;
+}
+
+header .layer {
+  background-color: rgba(255, 0, 0, 0.471);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.main-section {
+  transition: var(--main-transiton);
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.icon {
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  transition: 0.7s;
+}
+
+aside {
+  position: fixed;
+  z-index: 999999;
+  width: 230px;
+  left: -230px;
+  top: 0;
+  bottom: 0;
+  background-color: #414658;
+  color: white;
+}
+
+aside i {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: var(--main-transiton);
+}
+
+ul {
+  list-style: none;
+  margin-top: 50px;
+  margin-left: 30px;
+}
+
+ul li:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+aside a {
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--main-transiton);
+}
+
+aside i:hover,
+ul a:hover {
+  color: #7d3c49;
+}
+
+/* Accordion section start */
+.accordion .container {
+  margin: auto;
+  margin-top: 10vh;
+  text-align: center;
+  width: 50%;
+}
+h2 {
+  background-color: #e68285;
+  color: white;
+  font-weight: 500;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.desc {
+  background-color: #cccccc;
+  padding: 20px;
+  font-size: 14px;
+  display: none;
+}
+
+.desc:first-of-type {
+  display: block;
+}
+/* Accordion section end */
+/* Timer section start */
+#duration {
+  margin-top: 20vh;
+  background-image: url("../images/invitation-2508607__340.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#duration .layer {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 0, 0, 0.471);
+  padding: 50px 0;
+}
+
+#duration .container {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  width: 24%;
+  border: 1px solid white;
+  text-align: center;
+  padding: 80px 30px;
+  color: white;
+  font-size: 30px;
+}
+/* Timer section end */
+#contact .container {
+  width: 80%;
+  margin: auto;
+  margin-top: 20vh;
+  display: flex;
+  margin-bottom: 20vh;
+}
+
+.info {
+  width: 45%;
+}
+
+h3,
+h4 {
+  color: #444444;
+}
+
+h3 {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.info p {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #777777;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.info p:nth-of-type(2) {
+  line-height: 1.5;
+}
+
+.info ul li {
+  color: #777777;
+}
+
+.info li a {
+  color: red;
+  text-decoration: none;
+}
+
+.social {
+  display: flex;
+  margin-top: 30px;
+}
+
+.social .social-icon {
+  padding: 10px;
+  width: 40px;
+  margin-right: 10px;
+  border: 1px solid #777777;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777777;
+  cursor: pointer;
+  transition: var(--main-transiton);
+}
+
+.social .social-icon:hover {
+  background-color: red;
+  color: white;
+}
+
+.info ul li::before {
+  content: "";
+  font-family: "Font Awesome 6 Free";
+  padding: 0 10px 0 0;
+  font-weight: 900;
+}
+
+.info ul li:first-child::before {
+  content: "\f3c5";
+}
+
+.info ul li:nth-child(2)::before {
+  content: "\f0e0";
+}
+.info ul li:last-child::before {
+  content: "\f095";
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #777777;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+::placeholder {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+button {
+  width: fit-content;
+  background-color: red;
+  margin-top: 20px;
+  padding: 15px 30px;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+form p span {
+  color: red;
+}
+
+@media screen and (max-width: 767px) {
+  #duration .container {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 49%;
+    margin-bottom: 10px;
+  }
+
+  #contact .container {
+    flex-wrap: wrap;
+  }
+
+  .info {
+    width: 100%;
+  }
+}
